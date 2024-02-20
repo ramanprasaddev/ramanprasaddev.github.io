@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ram</title>
+    <meta name="theme-color" content="#f9fafb">
+    <meta property="og:site_name" content="ramanprasaddev.github.io">
+    <link rel='icon' type='image/png' href='/assets/img/iconBlack.png'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css"
+        ntegrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel='stylesheet' href="/assets/css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+            twemoji.parse(document.body,
+                { folder: 'svg', ext: '.svg' }
+            );
+        }
+    </script>
+    <style>
+        img.emoji {
+            width: 1em;
+            pointer-events: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body class="container max-w-6xl mx-auto animate__animated animate__fadeIn js">
+
+    <section id="nav">
+        <div class="mt-3">
+            <div class="navGrid">
+                <div class="navGridItem">
+                    <a href="/" class="navbar-brand navbar-brand-text"><img id="navbarImage" draggable="false"
+                            src="/assets/img/iconWhite.png" alt="IMG" width="40"></a>
+                </div>
+                <div class="navGridItem navGridItemRight">
+                    <button id="switchModeButton" class="navbarButton switchModeButton smallText">
+                        <i class='fa-solid fa-sun-bright opacity-90'></i>
+                    </button>
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+    </section>
+
+    <section id="head">
+        <div class="section">
+            <div class="sectionGrid">
+                <div class="sectionGridItem">
+                    <p class="smallText opacity-90" id="weatherText"><span id="weather"><i>Checking
+                                weather...</i></span>
+                    </p>
+                    <p class="blackText mt-2">Self-taught <span class="coloredText">web developer</span>,</p>
+                    <p class="blackText">from <span
+                            class="countryText border-red-500 border-b-2 border-opacity-70">New Zealand</span>.</p>
+                    <br>
+                    <div id="centeredButton" class="mt-1">
+                        <a href="https://github.com/ramanprasaddev" target="_blank"
+                            class="bigButton smallText rounded-custom mr-2"><span
+                                class="p-3 opacity-90">GitHub</span></a>
+                                <a href="https://www.linkedin.com/in/ramanprasad/" target="_blank"
+                                class="bigButton smallText rounded-custom mr-2"><span
+                                    class="p-3 opacity-90">Linkedin</span></a>
+                        <a href="mailto:ramanprasad.eth@gmail.com" class="bigButton smallText rounded-custom mr-2"><span
+                                class="p-3 opacity-90">Send
+                                mail</span></a>
+                    </div>
+                </div>
+                <div class="sectionGridItem sectionGridItemRight">
+                    <center>
+                        <div id="headAvatarContainer">
+                            <img draggable="false" id="headAvatar" src="/assets/img/memoji.png" alt="IMG"
+                                class="rounded-full">
+                            <div id="discordStatus" style="display:none"> <!--- nereye koycamı bulamadım gizledim a -->
+                                <div class="discordStatusOffline"></div>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities">
+        <div class="section">
+            <p class="smallText text-uppercase opacity-80">Activities</p>
+            <div id="activitiesGrid" class="mt-3">
+                <p id="activitiesStatus" class="smallText opacity-80"><i
+                        class="fa-light fa-spinner-third animate-spin inline-flex ml-1 mr-2"></i>Not Active 😭</p>
+                <div class="grid grid-cols-1 gap-3 sm:gird-cols-1 md:grid-cols-2">
+                    <div id="spotifyListening"></div>
+                    <div id="disneyPlusWatching"></div>
+                    <div id="netflixWatching"></div>
+                    <div id="visualStudioCodePlaying"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="section">
+            <p class="smallText text-uppercase opacity-80">Skills</p>
+            <div id="skillsGrid" class="mt-3">
+                <div class="grid grid-cols-2 gap-3 sm:gird-cols-2 md:grid-cols-4">
+                    
+                    
+                    <!-- Amazon Web Services (AWS) -->
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">AWS</p>
+                        </div>
+                    </div>
+
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">HTML</p>
+                        </div>
+                    </div>
+
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">Java</p>
+                        </div>
+                    </div>
+
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">CSS</p>
+                        </div>
+                    </div>
+                    
+                    <!-- .NET Framework -->
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">.NET Framework</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Linux -->
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">Linux</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Git -->
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">Git</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Unity -->
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">Unity</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Machine Learning -->
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">Machine Learning</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Google Ads -->
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">Google Ads</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Microsoft Excel -->
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">Microsoft Excel</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Cybersecurity -->
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">Cybersecurity</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Python -->
+                    <div class="card rounded-custom h-full">
+                        <div class="p-3 flex space-x-2 items-center overflow-hidden">
+                            <p class="smallText ml-3 opacity-80">Python</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CSS (Cascading Style Sheets) already included in your template -->
+                    
+                    <!-- Note: For icons, you can either use placeholders or find SVG icons that represent each skill. -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="footer">
+        <div class="footer section">
+            <div class="footerLeft">
+                <span class="smallText textCard rounded-custom mr-1 opacity-80">ramanprasaddev.github.io</span>
+                <!--<span class="smallText opacity-80">raman</span>-->
+            </div>
+        </div>
+    </section>
+
+    <button onclick="topFunction()" id="goTop" class="smallText transition-shadow">
+        <i class="fa-regular fa-chevron-up opacity-90"></i>
+    </button>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script src="/assets/js/lanyard.js"></script>
+<script src='/assets/js/goTop.js'></script>
+<script src="/assets/js/tippy.js"></script>
+<script src="/assets/js/githubRepositories.js"></script>
+<script src="/assets/js/darkMode.js"></script>
+<script src="/assets/js/weather.js"></script>
+
+</html>
